@@ -1,3 +1,5 @@
 .terraform/
 terraform.tfstate
 terraform.tfstate.*
+nginx-test-key-pair.pem
+.terraform.lock.hcl
