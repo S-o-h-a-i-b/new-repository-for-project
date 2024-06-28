@@ -1,5 +1,6 @@
 .terraform/
+*.pem
 terraform.tfstate
-terraform.tfstate.*
-nginx-test-key-pair.pem
+terraform.tfstate.backup
 .terraform.lock.hcl
+output.tf
