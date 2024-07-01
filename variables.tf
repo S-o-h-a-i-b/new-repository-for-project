@@ -1,71 +1,69 @@
-# variables.tf
-
 variable "region" {
-  description = "AWS region to deploy resources"
-  default     = "us-east-2"
+  description = "The AWS region to deploy to"
+  type        = string
 }
 
 variable "vpc_cidr" {
-  description = "CIDR block for the VPC"
-  default     = "10.0.0.0/16"
-}
-
-variable "public_subnet_cidr" {
-  description = "CIDR block for the public subnet"
-  default     = "10.0.1.0/24"
-}
-
-variable "private_subnet_cidr" {
-  description = "CIDR block for the private subnet"
-  default     = "10.0.2.0/24"
-}
-
-variable "availability_zone" {
-  description = "Availability zone for the subnets"
-  default     = "us-east-2a"
-}
-
-variable "instance_ami" {
-  description = "AMI ID for the EC2 instance"
-  default     = "ami-09040d770ffe2224f"
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  default     = "t2.micro"
-}
-
-variable "key_name" {
-  description = "Key pair name for the EC2 instance"
-  default     = "test-project-instance"
-}
-
-variable "public_key_path" {
-  description = "Path to the public key file"
-  default     = "~/.ssh/id_rsa.pub"
+  description = "The CIDR block for the VPC"
+  type        = string
 }
 
 variable "vpc_name" {
-  description = "Name of the VPC"
-  default     = "Main VPC"
+  description = "The name for the VPC"
+  type        = string
+}
+
+variable "public_subnet_cidr" {
+  description = "The CIDR block for the public subnet"
+  type        = string
 }
 
 variable "public_subnet_name" {
-  description = "Name of the public subnet"
-  default     = "Public Subnet"
+  description = "The name for the public subnet"
+  type        = string
+}
+
+variable "private_subnet_cidr" {
+  description = "The CIDR block for the private subnet"
+  type        = string
 }
 
 variable "private_subnet_name" {
-  description = "Name of the private subnet"
-  default     = "Private Subnet"
+  description = "The name for the private subnet"
+  type        = string
+}
+
+variable "availability_zone" {
+  description = "The availability zone for the subnets"
+  type        = string
 }
 
 variable "security_group_name" {
-  description = "Name of the security group"
-  default     = "Instance Security Group"
+  description = "The name for the security group"
+  type        = string
+}
+
+variable "key_name" {
+  description = "The name for the key pair"
+  type        = string
+}
+
+variable "public_key_path" {
+  description = "The path to the public key file"
+  type        = string
+}
+
+variable "instance_ami" {
+  description = "The AMI ID for the EC2 instance"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "The instance type for the EC2 instance"
+  type        = string
 }
 
 variable "instance_name" {
-  description = "Name of the EC2 instance"
-  default     = "Nginx Instance"
+  description = "The name for the EC2 instance"
+  type        = string
 }
